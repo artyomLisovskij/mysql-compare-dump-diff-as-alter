@@ -20,7 +20,7 @@ def compare_two_dicts_and_return_alter(db_dict1, db_dict2):
             # form create table total
             output_temp = ''
             for key2, value2 in value.items():
-                output_temp = '%s\n `%s` %s' % (output_temp, key2, value2) 
+                output_temp = '%s\n `%s` %s,' % (output_temp, key2, value2) 
             output_sql = '%s\n CREATE TABLE `%s` ( %s ) ENGINE=InnoDB DEFAULT CHARSET=utf8;' % (output_sql, key, output_temp) 
         else:
             # such table exists
